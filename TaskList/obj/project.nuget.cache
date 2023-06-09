@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5SBT0m2mjJ7w+kJN2JGYW/H2wmeRhX/7agldhO7ZQu7qGGU4PD2aSDqlkdXuwqRaq+aaJnlTvJLMNenGEt6CAA==",
+  "dgSpecHash": "xVmPvJczIkJKT6wzft5Za7VoDZUUGuTy2f3C/q4B2deXYfHiDMP+7eCQ6EIu8Dt/lGftoJ8BLJDMAsC6w4lxRA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kiki\\Desktop\\Code\\c# projects\\TaskList\\TaskList\\TaskList.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Kiki\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
+    "C:\\Users\\Kiki\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

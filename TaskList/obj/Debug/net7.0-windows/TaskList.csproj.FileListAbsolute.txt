@@ -22,3 +22,5 @@ C:\Users\Kiki\Desktop\Code\c# projects\TaskList\TaskList\obj\Debug\net7.0-window
 C:\Users\Kiki\Desktop\Code\c# projects\TaskList\TaskList\obj\Debug\net7.0-windows\TaskList_Content.g.cs
 C:\Users\Kiki\Desktop\Code\c# projects\TaskList\TaskList\obj\Debug\net7.0-windows\NewTask.g.cs
 C:\Users\Kiki\Desktop\Code\c# projects\TaskList\TaskList\obj\Debug\net7.0-windows\NewTask.baml
+C:\Users\Kiki\Desktop\Code\c# projects\TaskList\TaskList\obj\Debug\net7.0-windows\TaskList.csproj.Fody.CopyLocal.cache
+C:\Users\Kiki\Desktop\Code\c# projects\TaskList\TaskList\obj\Debug\net7.0-windows\TaskList.csproj.Fody.RuntimeCopyLocal.cache

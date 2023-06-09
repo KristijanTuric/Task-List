@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace TaskList
 {
@@ -26,10 +17,14 @@ namespace TaskList
 
         private void Button_Click_AddTask(object sender, RoutedEventArgs e)
         {
-            MyItem myItem = new MyItem();
+            TaskItem myItem = new TaskItem();
             myItem.Title = Title.Text;
             myItem.Description = Description.Text;
-            myItem.Priority = (int)Priority.SelectedItem;
+            myItem.Priority = Convert.ToInt16(Priority.Text);
+
+            StreamWriter sw = new StreamWriter("C:\\Users\\Kiki\\Desktop\\Code\\c# projects\\TaskList\\TaskList\\currentTasks.txt", true, Encoding.ASCII);
+            sw.WriteLine(myItem.ToString());
+            sw.Close();
 
 
             this.Close();

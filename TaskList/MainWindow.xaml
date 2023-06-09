@@ -27,6 +27,7 @@
                   Grid.Column="0" 
                   Margin="10"
                   Name="currentTasks"
+                  ItemsSource="{Binding Tasks}"
                   >
             <ListView.View>
                 <GridView AllowsColumnReorder="False">

@@ -22,14 +22,16 @@ namespace TaskList
     {
         public MainWindow()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            this.DataContext = new TaskStructureViewModel();
         }
 
         private void Button_Click_NewTask(object sender, RoutedEventArgs e)
-        {
-            //currentTasks.Items.Add(new MyItem { Title = "Test", Description = "Not here", Priority = 3 });
-            NewTask newTask = new NewTask();
+        {            
+            NewTask newTask = new();
             newTask.ShowDialog();
+
+            this.DataContext = new TaskStructureViewModel();
         }
 
         private void Button_Click_Finished(object sender, RoutedEventArgs e)
