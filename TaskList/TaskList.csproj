@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\TaskList.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Logo.jpg" />
+    <None Remove="Images\TaskList.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\TaskList.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Logo.jpg" />
+    <Resource Include="Images\TaskList.ico" />
+  </ItemGroup>
+
+</Project>
