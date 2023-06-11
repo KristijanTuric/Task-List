@@ -14,5 +14,10 @@
             Priority = _priority;
         }
 
+        public override string ToString()
+        {
+            return $"{Title}>{Description}>{Priority}";
+        }
+
     }
 }

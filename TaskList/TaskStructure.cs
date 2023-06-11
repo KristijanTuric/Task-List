@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
+using System.Windows;
 
 namespace TaskList
 {
@@ -29,12 +31,93 @@ namespace TaskList
             sr.Close();
 
             return taskItems;
+        }
+
+        public static List<TaskItem> GetFinishedTasks()
+        {
+            List<TaskItem> taskItems = new List<TaskItem>();
+
+            StreamReader sr = new StreamReader("C:\\Users\\Kiki\\Desktop\\Code\\c# projects\\TaskList\\TaskList\\finishedTasks.txt");
+            var line = sr.ReadLine();
+
+            while (line != null)
+            {
+                taskItems.Add(new TaskItem(line.Split(">")[0], line.Split(">")[1], Convert.ToInt16(line.Split(">")[2])));
+                line = sr.ReadLine();
+            }
+            sr.Close();
+
+            return taskItems;
 
         }
 
-        public static void RefreshTasks(TaskStructureViewModel taskData)
+        public static void FinishTask(string taskToRemove, string path)
         {
-            taskData.RefreshTasks();
+            try
+            {
+                using (StreamWriter sw = new StreamWriter("C:\\Users\\Kiki\\Desktop\\Code\\c# projects\\TaskList\\TaskList\\finishedTasks.txt", true, Encoding.ASCII))
+                {
+                    sw.WriteLine(taskToRemove);
+                };
+
+                StreamReader sr = new StreamReader(path);
+                var line = sr.ReadLine();
+                var tasks = new List<string>();
+                while (line != null)
+                {
+                    tasks.Add(line);
+                    line = sr.ReadLine();
+                }
+                sr.Close();
+
+                using (StreamWriter sw = new StreamWriter(path))
+                {
+                    foreach (var task in tasks)
+                    {
+                        if (!(taskToRemove == task))
+                        {
+                            sw.WriteLine(task);
+                        }
+                    }
+                };
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("You didn't select a task to finish");
+            }
+        }
+
+        public static void RemoveTask(string taskToRemove, string path)
+        {
+            try
+            {
+                StreamReader sr = new StreamReader(path);
+                var line = sr.ReadLine();
+                var tasks = new List<string>();
+                while (line != null)
+                {
+                    tasks.Add(line);
+                    line = sr.ReadLine();
+                }
+                sr.Close();
+
+                using (StreamWriter sw = new StreamWriter(path))
+                {
+                    foreach (var task in tasks)
+                    {
+                        if (!(taskToRemove == task))
+                        {
+                            sw.WriteLine(task);
+                        }
+                    }
+                };
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("You didn't select a task to remove");
+            }
         }
     }
 }

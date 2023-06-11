@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace TaskList
 {
@@ -23,25 +10,39 @@ namespace TaskList
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new TaskStructureViewModel();
+            refreshDataContext();
+
         }
+
+        private TaskStructureViewModel? _dataContext;
 
         private void Button_Click_NewTask(object sender, RoutedEventArgs e)
         {            
             NewTask newTask = new();
             newTask.ShowDialog();
 
-            this.DataContext = new TaskStructureViewModel();
+            refreshDataContext();
+        }
+
+        private void refreshDataContext()
+        {
+            _dataContext = new TaskStructureViewModel();
+            this.DataContext = _dataContext;
         }
 
         private void Button_Click_Finished(object sender, RoutedEventArgs e)
         {
+            TaskStructure.FinishTask(currentTasks.SelectedItem.ToString(), "C:\\Users\\Kiki\\Desktop\\Code\\c# projects\\TaskList\\TaskList\\currentTasks.txt");
 
+            refreshDataContext();
         }
 
         private void Button_Click_Remove(object sender, RoutedEventArgs e)
         {
 
+            TaskStructure.RemoveTask(finishedTasks.SelectedItem.ToString(), "C:\\Users\\Kiki\\Desktop\\Code\\c# projects\\TaskList\\TaskList\\finishedTasks.txt");
+
+            refreshDataContext();
         }
     }
 }

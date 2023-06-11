@@ -16,7 +16,6 @@
             <TextBlock Text="Description" />
             <TextBox Height="50"
                      TextWrapping="Wrap"
-                     AcceptsReturn="True"
                      x:Name="Description"
                      ></TextBox>
 
@@ -31,7 +30,8 @@
                     Content="Add"
                     Width="75"
                     Height="30"
-                    Click="Button_Click_AddTask"></Button>
+                    Click="Button_Click_AddTask"
+                    IsDefault="True"></Button>
         </StackPanel>
     </Grid>
 </Window>
