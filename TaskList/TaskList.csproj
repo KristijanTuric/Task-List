@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\Logo.jpg" />
     <None Remove="Images\TaskList.ico" />
   </ItemGroup>
 
@@ -22,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\Logo.jpg" />
     <Resource Include="Images\TaskList.ico" />
   </ItemGroup>
 

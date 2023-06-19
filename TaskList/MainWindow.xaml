@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaskList"
         mc:Ignorable="d"
-        Title="Task List" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen"
-        ResizeMode="CanMinimize">
+        Title="Task List" MinHeight="450" MinWidth="800"
+        WindowStartupLocation="CenterScreen">
     
     <Grid>
         
@@ -19,7 +18,7 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="250" />
         </Grid.ColumnDefinitions>
 
         <!-- Current Task List View -->
@@ -31,9 +30,9 @@
                   >
             <ListView.View>
                 <GridView AllowsColumnReorder="False">
-                    <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}" Width="200" />
-                    <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" Width="285" />
-                    <GridViewColumn Header="Priority" DisplayMemberBinding="{Binding Priority}" Width="50" />
+                    <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}" Width="Auto" />
+                    <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" Width="Auto" />
+                    <GridViewColumn Header="Priority" DisplayMemberBinding="{Binding Priority}" Width="Auto" />
                 </GridView>
             </ListView.View>
         </ListView>
@@ -91,9 +90,9 @@
         <Border Grid.Row="1" 
                 Grid.Column="1"
                 Margin="30"
-                CornerRadius="100">
+                CornerRadius="10">
             <Border.Background>
-                <ImageBrush Stretch="Fill" ImageSource="C:\Users\Kiki\Desktop\Code\c# projects\TaskList\TaskList\Images\Logo2.jpg"></ImageBrush>
+                <ImageBrush Stretch="Fill" ImageSource="C:\Users\Kiki\Desktop\Code\c# projects\TaskList\TaskList\Images\logo.jpeg"></ImageBrush>
             </Border.Background>
         </Border>
     </Grid>
