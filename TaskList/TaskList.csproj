@@ -9,10 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="currentTasks.txt" />
+    <None Remove="finishedTasks.txt" />
     <None Remove="Images\TaskList.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="currentTasks.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="finishedTasks.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\TaskList.ico" />
   </ItemGroup>
 

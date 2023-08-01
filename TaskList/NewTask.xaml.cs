@@ -22,7 +22,7 @@ namespace TaskList
             myItem.Description = Description.Text;
             myItem.Priority = Convert.ToInt16(Priority.Text);
 
-            StreamWriter sw = new StreamWriter("C:\\Users\\Kiki\\Desktop\\Code\\c# projects\\TaskList\\TaskList\\currentTasks.txt", true, Encoding.ASCII);
+            StreamWriter sw = new StreamWriter("currentTasks.txt", true, Encoding.ASCII);
             sw.WriteLine(myItem.ToString());
             sw.Close();
 

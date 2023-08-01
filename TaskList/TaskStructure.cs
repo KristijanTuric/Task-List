@@ -20,7 +20,7 @@ namespace TaskList
 
             List<TaskItem> taskItems = new List<TaskItem>();
 
-            StreamReader sr = new StreamReader("C:\\Users\\Kiki\\Desktop\\Code\\c# projects\\TaskList\\TaskList\\currentTasks.txt");
+            StreamReader sr = new StreamReader("currentTasks.txt");
             var line = sr.ReadLine();
             
             while (line != null)
@@ -37,7 +37,7 @@ namespace TaskList
         {
             List<TaskItem> taskItems = new List<TaskItem>();
 
-            StreamReader sr = new StreamReader("C:\\Users\\Kiki\\Desktop\\Code\\c# projects\\TaskList\\TaskList\\finishedTasks.txt");
+            StreamReader sr = new StreamReader("finishedTasks.txt");
             var line = sr.ReadLine();
 
             while (line != null)
@@ -55,7 +55,7 @@ namespace TaskList
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter("C:\\Users\\Kiki\\Desktop\\Code\\c# projects\\TaskList\\TaskList\\finishedTasks.txt", true, Encoding.ASCII))
+                using (StreamWriter sw = new StreamWriter("finishedTasks.txt", true, Encoding.ASCII))
                 {
                     sw.WriteLine(taskToRemove);
                 };

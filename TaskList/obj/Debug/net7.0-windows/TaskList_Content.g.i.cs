@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("currenttasks.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("finishedtasks.txt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/tasklist.ico")]
 
 

@@ -32,7 +32,7 @@ namespace TaskList
 
         private void Button_Click_Finished(object sender, RoutedEventArgs e)
         {
-            TaskStructure.FinishTask(currentTasks.SelectedItem.ToString(), "C:\\Users\\Kiki\\Desktop\\Code\\c# projects\\TaskList\\TaskList\\currentTasks.txt");
+            TaskStructure.FinishTask(currentTasks.SelectedItem.ToString(), "currentTasks.txt");
 
             refreshDataContext();
         }
@@ -40,7 +40,7 @@ namespace TaskList
         private void Button_Click_Remove(object sender, RoutedEventArgs e)
         {
 
-            TaskStructure.RemoveTask(finishedTasks.SelectedItem.ToString(), "C:\\Users\\Kiki\\Desktop\\Code\\c# projects\\TaskList\\TaskList\\finishedTasks.txt");
+            TaskStructure.RemoveTask(finishedTasks.SelectedItem.ToString(), "finishedTasks.txt");
 
             refreshDataContext();
         }
